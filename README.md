@@ -10,13 +10,13 @@ Erro no SCRAM (mudar para Versão do PHP 8.0.3 do WampServe).
 # Composer
 composer global require laravel/installer \
 composer require laravel/ui \
-composer create-project laravel/laravel example-app \
+composer create-project laravel/laravel example-app 
 
 # Laravel
-laravel new test-app\
+laravel new test-app
 
 # Servir estático
-src=”{{ asset(‘css/styles.cc’) }}”\
+src=”{{ asset(‘css/styles.cc’) }}”
 
 # Artisan
 php artisan ui vue --auth\
@@ -29,18 +29,18 @@ php artisan make:controller ClientsController\
 php artisan make:controller Admin\TestControler\
 php artisan migrate\
 php artisan make:migration create_clients_table --create=clients\
-php artisan migrate:refresh\
+php artisan migrate:refresh
 
 php artisan make:seeder NomeSeeder\
 php artisan make:model NomeModel\
 php artisan make:model StatusOperacao --seed\
 php artisan db:seed\
 php artisan db:seed --class=UserSeeder\
-php artisan migrate:fresh --seed\
+php artisan migrate:fresh --seed
 
 #consultar registros no banco de dados 
 php artisan tinker\
-\App\Models\Contact::all();\
+\App\Models\Contact::all();
 
 $client = new \App\Models\Client(); \
 $client->nome='Welliton Cunha'; \
@@ -58,17 +58,17 @@ $clients->delete();
 # Implementar Login
 composer require laravel/jetstream\
 php artisan jetstream:install livewire\
-php artisan migrate\
+php artisan migrate
 
 # API
 php artisan make:model  Models\Dog -m \
 php artisan migrate\
-php artisan make:controller Api\DogController --resouce \
+php artisan make:controller Api\DogController --resouce 
 
 # Telescope
 php artisan telescope:publish\
 On vendor/laravel/telescope/resources/views/layout.blade.php\
-window.Telescope.path = 'ProjetoCRM/public/telescope';\
+window.Telescope.path = 'ProjetoCRM/public/telescope';
 
 # Livewire
 composer require livewire/livewire\
@@ -80,4 +80,4 @@ Abrir config/livewire.php mudar 'asset_url' => env('APP_URL', 'http://localhost'
 Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes:\
 Edite o arquivo app\Providers\AppServiceProvider.php\
 Adicione o namespace use Illuminate\Support\Facades\Schema;\
-Dentro do método boot adicione Schema::defaultStringLength(191);\
+Dentro do método boot adicione Schema::defaultStringLength(191);
