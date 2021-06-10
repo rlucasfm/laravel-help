@@ -8,57 +8,57 @@ extension=pgsql] do php.ini do wampserve) e ativar no Wampserve com o botão esq
 Erro no SCRAM (mudar para Versão do PHP 8.0.3 do WampServe).
 
 # Composer
-composer global require laravel/installer
-composer require laravel/ui
-composer create-project laravel/laravel example-app
+composer global require laravel/installer \
+composer require laravel/ui \
+composer create-project laravel/laravel example-app \
 
 # Laravel
-laravel new test-app
+laravel new test-app\
 
 # Servir estático
-src=”{{ asset(‘css/styles.cc’) }}”
+src=”{{ asset(‘css/styles.cc’) }}”\
 
 # Artisan
-php artisan ui vue --auth
-php artisan serve
-php artisan route:list
-php artisan down
-php artisan up
+php artisan ui vue --auth\
+php artisan serve\
+php artisan route:list\
+php artisan down\
+php artisan up\
 
-php artisan make:controller ClientsController
-php artisan make:controller Admin\TestControler
-php artisan migrate
-php artisan make:migration create_clients_table --create=clients
-php artisan migrate:refresh
+php artisan make:controller ClientsController\
+php artisan make:controller Admin\TestControler\
+php artisan migrate\
+php artisan make:migration create_clients_table --create=clients\
+php artisan migrate:refresh\
 
-php artisan make:seeder NomeSeeder
-php artisan make:model NomeModel
-php artisan make:model StatusOperacao --seed
-php artisan db:seed
-php artisan db:seed --class=UserSeeder
-php artisan migrate:fresh --seed
+php artisan make:seeder NomeSeeder\
+php artisan make:model NomeModel\
+php artisan make:model StatusOperacao --seed\
+php artisan db:seed\
+php artisan db:seed --class=UserSeeder\
+php artisan migrate:fresh --seed\
 
 #consultar registros no banco de dados 
-php artisan tinker
-\App\Models\Contact::all();
+php artisan tinker\
+\App\Models\Contact::all();\
 
-$client = new \App\Models\Client(); 
-$client->nome='Welliton Cunha'; 
-$client->email='wellitonsousa@live.com'; 
-save(); 
-$client 
+$client = new \App\Models\Client(); \
+$client->nome='Welliton Cunha'; \
+$client->email='wellitonsousa@live.com'; \
+save(); \
+$client \
 
-\App\Models\Client::all(); 
-$clients = \App\Models\Client::all();
-$clients[0] 
-$clients = \App\Models\Client::find(1); 
-$client->nome = 'Welliton Sousa'; 
-$clients->delete(); 
+\App\Models\Client::all(); \
+$clients = \App\Models\Client::all();\
+$clients[0] \
+$clients = \App\Models\Client::find(1); \
+$client->nome = 'Welliton Sousa'; \
+$clients->delete(); \
 
 # Implementar Login
-composer require laravel/jetstream
-php artisan jetstream:install livewire
-php artisan migrate
+composer require laravel/jetstream\
+php artisan jetstream:install livewire\
+php artisan migrate\
 
 
 # API
