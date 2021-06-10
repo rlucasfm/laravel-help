@@ -23,7 +23,7 @@ php artisan ui vue --auth\
 php artisan serve\
 php artisan route:list\
 php artisan down\
-php artisan up\
+php artisan up
 
 php artisan make:controller ClientsController\
 php artisan make:controller Admin\TestControler\
@@ -46,20 +46,19 @@ $client = new \App\Models\Client(); \
 $client->nome='Welliton Cunha'; \
 $client->email='wellitonsousa@live.com'; \
 save(); \
-$client \
+$client 
 
 \App\Models\Client::all(); \
 $clients = \App\Models\Client::all();\
 $clients[0] \
 $clients = \App\Models\Client::find(1); \
 $client->nome = 'Welliton Sousa'; \
-$clients->delete(); \
+$clients->delete(); 
 
 # Implementar Login
 composer require laravel/jetstream\
 php artisan jetstream:install livewire\
 php artisan migrate\
-
 
 # API
 php artisan make:model  Models\Dog -m \
