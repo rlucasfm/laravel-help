@@ -62,23 +62,23 @@ php artisan migrate\
 
 
 # API
-php artisan make:model  Models\Dog -m
-php artisan migrate
-php artisan make:controller Api\DogController --resouce 
+php artisan make:model  Models\Dog -m \
+php artisan migrate\
+php artisan make:controller Api\DogController --resouce \
 
 # Telescope
-php artisan telescope:publish
-On vendor/laravel/telescope/resources/views/layout.blade.php
-window.Telescope.path = 'ProjetoCRM/public/telescope';
+php artisan telescope:publish\
+On vendor/laravel/telescope/resources/views/layout.blade.php\
+window.Telescope.path = 'ProjetoCRM/public/telescope';\
 
 # Livewire
-composer require livewire/livewire
-{php artisan livewire:publish (Corrigir erro 404 NOT FOUND)
-Abrir config/livewire.php mudar 'asset_url' => env('APP_URL', 'http://localhost'),
-.env -> APP_URL=http://projetos-laravel/ProjetoCRM/public}
+composer require livewire/livewire\
+{php artisan livewire:publish (Corrigir erro 404 NOT FOUND)\
+Abrir config/livewire.php mudar 'asset_url' => env('APP_URL', 'http://localhost'),\
+.env -> APP_URL=http://projetos-laravel/ProjetoCRM/public}\
 
 # Migration Errors
-Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes:
-Edite o arquivo app\Providers\AppServiceProvider.php
-Adicione o namespace use Illuminate\Support\Facades\Schema;
-Dentro do método boot adicione Schema::defaultStringLength(191);
+Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes:\
+Edite o arquivo app\Providers\AppServiceProvider.php\
+Adicione o namespace use Illuminate\Support\Facades\Schema;\
+Dentro do método boot adicione Schema::defaultStringLength(191);\
